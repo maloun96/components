@@ -1,14 +1,41 @@
 .#{$WEBEX_COMPONENTS_CLASS_PREFIX}-member {
   display: flex;
+  align-items: center;
   padding: 0.625rem 0 0.625rem 0;
 
-  .member-name {
+  .details {
+    flex: 1;
+    min-width: 0;
+    margin-left: 0.25rem;
+  }
+
+  .name {
     @include body-fonts;
-    align-items: center;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding-left: 0.25rem;
+
+    .guest {
+      color: $md-gray-70;
+    }
+  }
+
+  .subtext, .roles {
+    font-size: 0.875rem;
+    color: $md-gray-70;
+  }
+
+  .organization {
+    font-size: 0.875rem;
+    color: $md-yellow-40;
+  }
+
+  .sharing {
+    margin-right: 2.5rem;
+  }
+
+  .muted {
+    color: $md-red-60;
   }
 
 }

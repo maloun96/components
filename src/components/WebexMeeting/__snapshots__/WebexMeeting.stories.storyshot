@@ -69,6 +69,16 @@ Array [
     src="./video/ongoing-meeting.mp4"
     width="0"
   />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
 ]
 `;
 
@@ -78,20 +88,14 @@ Array [
     className="wxc-meeting wxc-meeting-active"
   >
     <div
-      className="wxc-in-meeting remote-sharing"
+      className="wxc-in-meeting"
     >
       <div
-        className="wxc-remote-media remote-media-in-meeting remote-video-n-share"
+        className="wxc-remote-media remote-media-in-meeting"
       >
         <video
           autoPlay={true}
           className="wxc-remote-video"
-          muted={true}
-          playsInline={true}
-        />
-        <video
-          autoPlay={true}
-          className="wxc-remote-share"
           muted={true}
           playsInline={true}
         />
@@ -106,6 +110,11 @@ Array [
           autoPlay={true}
           playsInline={true}
         />
+      </div>
+      <div
+        className="share-notice"
+      >
+        You're sharing your screen
       </div>
     </div>
     <div
@@ -213,7 +222,7 @@ Array [
         >
           <i
             aria-label={null}
-            className="md-icon icon icon-share_28"
+            className="md-icon icon icon-share-screen-presence-stroke_26"
             style={
               Object {
                 "fontSize": 28,
@@ -269,6 +278,16 @@ Array [
     muted={true}
     playsInline={true}
     src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
     width="0"
   />,
 ]
@@ -417,6 +436,16 @@ Array [
     src="./video/ongoing-meeting.mp4"
     width="0"
   />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
 ]
 `;
 
@@ -435,6 +464,16 @@ Array [
     muted={true}
     playsInline={true}
     src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
     width="0"
   />,
 ]
@@ -457,6 +496,16 @@ Array [
     muted={true}
     playsInline={true}
     src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
     width="0"
   />,
 ]
@@ -484,6 +533,11 @@ Array [
           autoPlay={true}
           playsInline={true}
         />
+      </div>
+      <div
+        className="share-notice"
+      >
+        You're sharing your screen
       </div>
     </div>
     <div
@@ -564,10 +618,10 @@ Array [
         </span>
       </button>
       <button
-        alt="Start Sharing"
-        aria-label="Start Sharing"
+        alt="Stop Sharing"
+        aria-label="Stop Sharing"
         aria-pressed={null}
-        className="md-button md-button--circle md-button--56"
+        className="md-button md-button--circle md-button--56 md-button--red"
         data-md-event-key="md-button-0"
         disabled={false}
         id="md-button-0"
@@ -591,7 +645,7 @@ Array [
         >
           <i
             aria-label={null}
-            className="md-icon icon icon-share_28"
+            className="md-icon icon icon-share-screen-presence-stroke_26"
             style={
               Object {
                 "fontSize": 28,
@@ -647,6 +701,16 @@ Array [
     muted={true}
     playsInline={true}
     src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
     width="0"
   />,
 ]

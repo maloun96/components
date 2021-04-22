@@ -1,38 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Platform/Webex Member Space 1`] = `
+exports[`Storyshots Platform/Webex Member External Organization 1`] = `
 Array [
   <div
-    className="wxc-member"
+    style={
+      Object {
+        "width": "20rem",
+      }
+    }
   >
     <div
-      className="md-avatar md-avatar--medium"
-      title="Barbara German"
+      className="wxc-member"
     >
-      <span
-        className="md-avatar__letter"
-        style={
-          Object {
-            "backgroundColor": "",
-            "color": "",
-          }
-        }
+      <div
+        className="md-avatar md-avatar--medium"
+        title="Brandon Seeger"
       >
-        BG
-      </span>
-      <img
-        alt="Barbara German"
-        className="md-avatar__img md-avatar__img--hidden"
-        draggable={false}
-        onError={[Function]}
-        onLoad={[Function]}
-        src="./images/barbara.png"
-      />
-    </div>
-    <div
-      className="member-name"
-    >
-      Barbara German
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
+          }
+        >
+          BS
+        </span>
+        <img
+          alt="Brandon Seeger"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/brandon.png"
+        />
+      </div>
+      <div
+        className="details"
+      >
+        <div
+          className="name"
+        >
+          Brandon Seeger
+        </div>
+        <div
+          className="organization"
+        >
+          Gmail.com
+        </div>
+      </div>
     </div>
   </div>,
   <video
@@ -45,42 +62,78 @@ Array [
     src="./video/ongoing-meeting.mp4"
     width="0"
   />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
 ]
 `;
 
-exports[`Storyshots Platform/Webex Member Status Enabled 1`] = `
+exports[`Storyshots Platform/Webex Member Guest 1`] = `
 Array [
   <div
-    className="wxc-member"
+    style={
+      Object {
+        "width": "20rem",
+      }
+    }
   >
     <div
-      className="md-avatar md-avatar--dnd md-avatar--medium"
-      title="Barbara German"
+      className="wxc-member"
     >
-      <span
-        className="md-avatar__letter"
+      <div
+        className="md-avatar md-avatar--medium"
+        title="Maria Rossi"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
+          }
+        >
+          MR
+        </span>
+        <img
+          alt="Maria Rossi"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/maria.png"
+        />
+      </div>
+      <div
+        className="details"
+      >
+        <div
+          className="name"
+        >
+          Maria Rossi
+          <span
+            className="guest"
+          >
+             (Guest)
+          </span>
+        </div>
+      </div>
+      <i
+        aria-label={null}
+        className="md-icon icon icon-microphone-muted_16 muted"
         style={
           Object {
-            "backgroundColor": "",
-            "color": "",
+            "fontSize": 16,
           }
         }
-      >
-        BG
-      </span>
-      <img
-        alt="Barbara German"
-        className="md-avatar__img md-avatar__img--hidden"
-        draggable={false}
-        onError={[Function]}
-        onLoad={[Function]}
-        src="./images/barbara.png"
       />
-    </div>
-    <div
-      className="member-name"
-    >
-      Barbara German
     </div>
   </div>,
   <video
@@ -91,6 +144,403 @@ Array [
     muted={true}
     playsInline={true}
     src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Platform/Webex Member Host 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "width": "20rem",
+      }
+    }
+  >
+    <div
+      className="wxc-member"
+    >
+      <div
+        className="md-avatar md-avatar--medium"
+        title="Simon Damiano"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
+          }
+        >
+          SD
+        </span>
+        <img
+          alt="Simon Damiano"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/simon.png"
+        />
+      </div>
+      <div
+        className="details"
+      >
+        <div
+          className="name"
+        >
+          Simon Damiano
+        </div>
+        <div
+          className="roles"
+        >
+          Host
+        </div>
+      </div>
+      <i
+        aria-label={null}
+        className="md-icon icon icon-microphone-muted_16 muted"
+        style={
+          Object {
+            "fontSize": 16,
+          }
+        }
+      />
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Platform/Webex Member Muted 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "width": "20rem",
+      }
+    }
+  >
+    <div
+      className="wxc-member"
+    >
+      <div
+        className="md-avatar md-avatar--medium"
+        title="Giacomo Edwards"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
+          }
+        >
+          GE
+        </span>
+        <img
+          alt="Giacomo Edwards"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/giacomo.png"
+        />
+      </div>
+      <div
+        className="details"
+      >
+        <div
+          className="name"
+        >
+          Giacomo Edwards
+        </div>
+      </div>
+      <i
+        aria-label={null}
+        className="md-icon icon icon-microphone-muted_16 muted"
+        style={
+          Object {
+            "fontSize": 16,
+          }
+        }
+      />
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Platform/Webex Member Screen Sharing 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "width": "20rem",
+      }
+    }
+  >
+    <div
+      className="wxc-member"
+    >
+      <div
+        className="md-avatar md-avatar--medium"
+        title="Brenda Song"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
+          }
+        >
+          BS
+        </span>
+        <img
+          alt="Brenda Song"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/brenda.png"
+        />
+      </div>
+      <div
+        className="details"
+      >
+        <div
+          className="name"
+        >
+          Brenda Song
+        </div>
+        <div
+          className="roles"
+        >
+          Presenter
+        </div>
+      </div>
+      <i
+        aria-label={null}
+        className="md-icon icon icon-content-share_16 sharing"
+        style={
+          Object {
+            "fontSize": 16,
+          }
+        }
+      />
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Platform/Webex Member Space 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "width": "20rem",
+      }
+    }
+  >
+    <div
+      className="wxc-member"
+    >
+      <div
+        className="md-avatar md-avatar--medium"
+        title="Barbara German"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
+          }
+        >
+          BG
+        </span>
+        <img
+          alt="Barbara German"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/barbara.png"
+        />
+      </div>
+      <div
+        className="details"
+      >
+        <div
+          className="name"
+        >
+          Barbara German
+        </div>
+      </div>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
+    width="0"
+  />,
+]
+`;
+
+exports[`Storyshots Platform/Webex Member Status Enabled 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "width": "20rem",
+      }
+    }
+  >
+    <div
+      className="wxc-member"
+    >
+      <div
+        className="md-avatar md-avatar--dnd md-avatar--medium"
+        title="Barbara German"
+      >
+        <span
+          className="md-avatar__letter"
+          style={
+            Object {
+              "backgroundColor": "",
+              "color": "",
+            }
+          }
+        >
+          BG
+        </span>
+        <img
+          alt="Barbara German"
+          className="md-avatar__img md-avatar__img--hidden"
+          draggable={false}
+          onError={[Function]}
+          onLoad={[Function]}
+          src="./images/barbara.png"
+        />
+      </div>
+      <div
+        className="details"
+      >
+        <div
+          className="name"
+        >
+          Barbara German
+        </div>
+      </div>
+    </div>
+  </div>,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-video"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-meeting.mp4"
+    width="0"
+  />,
+  <video
+    autoPlay={true}
+    height="0"
+    id="remote-share"
+    loop={true}
+    muted={true}
+    playsInline={true}
+    src="./video/ongoing-share.mp4"
     width="0"
   />,
 ]

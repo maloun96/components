@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import {DestinationType} from '@webex/component-adapter-interfaces';
+import {Icon} from '@momentum-ui/react';
 import {WEBEX_COMPONENTS_CLASS_PREFIX} from '../../constants';
 
 import WebexMember from '../WebexMember/WebexMember';
-import useMemberships from '../hooks/useMemberships';
+import useMembers from '../hooks/useMembers';
+import {useMe} from '../hooks';
 
 // TODO: Figure out how to import JS Doc definitions and remove duplication.
 /**
@@ -23,15 +25,50 @@ import useMemberships from '../hooks/useMemberships';
  * @returns {object} JSX of the component
  */
 export default function WebexMemberRoster({destinationID, destinationType}) {
-  const memberships = useMemberships(destinationID, destinationType);
-  const members = memberships.map(
-    (member) => <WebexMember key={member.personID} personID={member.personID} />,
+  const members = useMembers(destinationID, destinationType);
+  const {orgID} = useMe();
+
+  const renderMembers = (data) => data.map(
+    ({ID}) => (
+      <WebexMember
+        destinationType={destinationType}
+        destinationID={destinationID}
+        personID={ID}
+        key={ID}
+      />
+    ),
   );
 
-  return <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-roster`}>{members}</div>;
+  const renderSection = (data, title) => data.length > 0 && (
+    <>
+      <h4 className="section-title">{title}</h4>
+      {renderMembers(data)}
+    </>
+  );
+
+  const warningExternalMembers = members.some((member) => member.orgID !== orgID) && (
+    <div className="external-user-warning">
+      <Icon color="yellow-40" name="icon-external-user_20" />
+      <h5>People outside your company are included in this space</h5>
+    </div>
+  );
+
+  return (
+    <div className={`${WEBEX_COMPONENTS_CLASS_PREFIX}-member-roster`}>
+      {warningExternalMembers}
+      {destinationType !== DestinationType.MEETING
+        ? renderMembers(members)
+        : (
+          <>
+            {renderSection(members.filter((member) => member.inMeeting), 'In meeting')}
+            {renderSection(members.filter((member) => !member.inMeeting), 'Not in meeting')}
+          </>
+        )}
+    </div>
+  );
 }
 
 WebexMemberRoster.propTypes = {
-  destinationID: PropTypes.string.isRequired,
   destinationType: PropTypes.string.isRequired,
+  destinationID: PropTypes.string.isRequired,
 };

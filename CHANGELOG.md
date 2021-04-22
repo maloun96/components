@@ -1,3 +1,131 @@
+# [1.60.0](https://github.com/webex/components/compare/v1.59.0...v1.60.0) (2021-04-21)
+
+
+### Features
+
+* **WebexJsonAdaptor:** add demonstration video for remote sharing ([bf0d65b](https://github.com/webex/components/commit/bf0d65b1c2e2752da22c459880691d5bf748a220))
+
+# [1.59.0](https://github.com/webex/components/compare/v1.58.1...v1.59.0) (2021-04-21)
+
+
+### Features
+
+* **hoc:** add a withMeeting HOC for class components ([48f508b](https://github.com/webex/components/commit/48f508bdc9b86092c4621559bf49f7abf85f95fa))
+
+## [1.58.1](https://github.com/webex/components/compare/v1.58.0...v1.58.1) (2021-04-19)
+
+
+### Bug Fixes
+
+* **WebexMeetingControl:** update size for participant list icon ([1fbfe5f](https://github.com/webex/components/commit/1fbfe5f5ca1c93f8592db9a5be1a0a8a942a6548))
+
+# [1.58.0](https://github.com/webex/components/compare/v1.57.0...v1.58.0) (2021-04-15)
+
+
+### Features
+
+* **WebexMeeting:** add an overlay banner when screen sharing ([e3e2901](https://github.com/webex/components/commit/e3e290101bc25441f338af381a0797f971c046f0))
+
+# [1.57.0](https://github.com/webex/components/compare/v1.56.0...v1.57.0) (2021-04-14)
+
+
+### Features
+
+* **WebexMember:** display if user is guest ([5b2ac94](https://github.com/webex/components/commit/5b2ac94c72e7da2e5a74a1675b8945b9b77eac57))
+
+# [1.56.0](https://github.com/webex/components/compare/v1.55.0...v1.56.0) (2021-04-13)
+
+
+### Features
+
+* **MeetingsJsonAdapter:** add member-roster control ([4e49a62](https://github.com/webex/components/commit/4e49a62d8b8c67fef7f8e5f26e0f80b3d4473bc3))
+
+# [1.55.0](https://github.com/webex/components/compare/v1.54.0...v1.55.0) (2021-04-13)
+
+
+### Features
+
+* **hooks:** export useMeetingDestination ([9c982bd](https://github.com/webex/components/commit/9c982bde52e52a88d85a273af87e9772f3b3c929))
+
+# [1.54.0](https://github.com/webex/components/compare/v1.53.0...v1.54.0) (2021-04-13)
+
+
+### Features
+
+* **WebexMember:** display exernal user's organization ([41e35c3](https://github.com/webex/components/commit/41e35c30ca471d62cb98721e75df85310af36f8e))
+
+# [1.53.0](https://github.com/webex/components/compare/v1.52.1...v1.53.0) (2021-04-10)
+
+
+### Features
+
+* **WebexMember:** display if user is host ([f8bd87a](https://github.com/webex/components/commit/f8bd87a56d3ada424c8e4c26329ac5a834c2a8a1))
+
+## [1.52.1](https://github.com/webex/components/compare/v1.52.0...v1.52.1) (2021-04-10)
+
+
+### Bug Fixes
+
+* **WebexMeetingControl:** update screen sharing icon ([d2b00de](https://github.com/webex/components/commit/d2b00dea8cd322e4808e7f19ecb7ca88a39a4069))
+
+# [1.52.0](https://github.com/webex/components/compare/v1.51.0...v1.52.0) (2021-04-09)
+
+
+### Features
+
+* **WebexMeeting:** set meetingID as component prop ([1fbc506](https://github.com/webex/components/commit/1fbc506f75d27d3b25e781ce6cda8fb8a809d063))
+* **WebexMember:** indicate current user if in meeting ([6635b44](https://github.com/webex/components/commit/6635b4490b7a558a83da75ed6c74be104e771982))
+
+# [1.51.0](https://github.com/webex/components/compare/v1.50.0...v1.51.0) (2021-04-07)
+
+
+### Features
+
+* **WebexMember:** display icon when member is sharing ([18073da](https://github.com/webex/components/commit/18073dac9e995d62956fca211a30bf039d7beefc))
+
+# [1.50.0](https://github.com/webex/components/compare/v1.49.1...v1.50.0) (2021-04-06)
+
+
+### Features
+
+* **hooks:** add useOrganization hook ([60e305e](https://github.com/webex/components/commit/60e305e483a443d40282f28489b29a44f2f711f0))
+
+## [1.49.1](https://github.com/webex/components/compare/v1.49.0...v1.49.1) (2021-04-06)
+
+
+### Bug Fixes
+
+* **WebexMember:** make muted icon proportional with text ([2a79fc8](https://github.com/webex/components/commit/2a79fc89610eb9d5b85b676d43050283e8143e60))
+
+# [1.49.0](https://github.com/webex/components/compare/v1.48.0...v1.49.0) (2021-04-01)
+
+
+### Features
+
+* **OrganizationsJsonAdapter:** implement the organizationsJSONAdapter ([c06fbde](https://github.com/webex/components/commit/c06fbdeb635f0aea84c8b9172272c05da1843ea0))
+
+# [1.48.0](https://github.com/webex/components/compare/v1.47.0...v1.48.0) (2021-03-31)
+
+
+### Features
+
+* **WebexMemberRoster:** show warning if member from different org exists ([ddcd9f0](https://github.com/webex/components/commit/ddcd9f0d817e35456509e1a9f1908a6bc15cf599))
+
+# [1.47.0](https://github.com/webex/components/compare/v1.46.0...v1.47.0) (2021-03-25)
+
+
+### Features
+
+* **MemberRoster:** show in meeting and not in meeting members ([496eaf2](https://github.com/webex/components/commit/496eaf2a4220989c086c209c310297d7ecc24afc))
+* **WebexRemoteMedia:** handle inMeeting members ([96a0008](https://github.com/webex/components/commit/96a0008fe02db1ef6ff485ce03db23c8dc338411))
+
+# [1.46.0](https://github.com/webex/components/compare/v1.45.6...v1.46.0) (2021-03-22)
+
+
+### Features
+
+* **WebexMember:** display icon when member is muted ([2c760c4](https://github.com/webex/components/commit/2c760c42bae29021678d76aa93acc09d03040d8a))
+
 ## [1.45.6](https://github.com/webex/components/compare/v1.45.5...v1.45.6) (2021-01-21)
 
 
