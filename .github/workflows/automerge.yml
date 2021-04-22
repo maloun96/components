@@ -34,7 +34,7 @@ jobs:
     steps:
       - uses: reitermarkus/automerge@v2
         with:
-          token: ${{ secrets.MY_GITHUB_TOKEN }}
+          token: ${{ secrets.ACTIONS_TOKEN }}
           author-associations: 'dependabot[bot]'
           merge-method: rebase
           do-not-merge-labels: never-merge
