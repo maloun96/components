@@ -11,9 +11,6 @@ jobs:
       - name: Get result
         run: echo "${{github.event.pull_request.user.login}}"
 
-      - name: Get result2
-        run: echo "${{context.payload.pull_request.user.login}}"
-
       - name: automerge
         if: github.event.pull_request.user.login == 'dependabot[bot]'
         uses: actions/github-script@0.2.0
