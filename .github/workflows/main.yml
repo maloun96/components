@@ -1,16 +1,24 @@
-name: Auto-merge
-
-on:
+name: sample
+on: 
   pull_request:
-    types: [opened]
-
+    types: [opened, reopened]
 jobs:
-  automerge:
+  evaluate_dependabot_pr:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    name: Parse Dependabot PR title
+    outputs:
+      dependency_name: ${{ steps.parse_dependabot_pr_automerge.outputs.dependency_name }}
+      version_from: ${{ steps.parse_dependabot_pr_automerge.outputs.version_from }}
+      version_to: ${{ steps.parse_dependabot_pr_automerge.outputs.version_to }}
+      is_auto_merge_candidate: ${{ steps.parse_dependabot_pr_automerge.outputs.is_interesting_package }}
+      is_auto_release_candidate: ${{ steps.parse_dependabot_pr_autorelease.outputs.is_interesting_package }}
+      semver_increment: ${{ steps.parse_dependabot_pr_automerge.outputs.semver_increment }}
     steps:
-      - name: Enable auto-merge for new PRs
-        run: gh pr merge --auto --merge "$PR_URL"
-        env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+      - uses: actions/checkout@v2
+
+      - name: Dependabot PR - AutoMerge Candidate
+        id: parse_dependabot_pr_automerge
+        uses: endjin/pr-autoflow/actions/dependabot-pr-parser@v1
+        with:
+          pr_title: ${{ github.event.pull_request.title }}
+          package_wildcard_expressions: ${{ steps.get_pr_autoflow_config.outputs.AUTO_MERGE_PACKAGE_WILDCARD_EXPRESSIONS }}
