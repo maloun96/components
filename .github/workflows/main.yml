@@ -6,10 +6,16 @@ on:
 jobs:
   worker:
     runs-on: ubuntu-latest
-
+  
+    env:
+      AUTHOR: github.event.pull_request.user.login
+      
     steps:
       - name: Get result
         run: echo "${{github.event.pull_request.user.login}}"
+        
+      - name: Get result 2
+        run: echo "${{AUTHOR}}"
 
       - name: automerge
         if: github.event.pull_request.user.login == 'dependabot[bot]'
@@ -17,7 +23,7 @@ jobs:
         with:
           script:  |
             github.pullRequests.createReview({
-              owner: github.event.pull_request.user.login,
+              owner: AUTHOR,
               repo: context.payload.repository.name,
               pull_number: context.payload.pull_request.number,
               event: 'APPROVE'
