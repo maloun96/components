@@ -1,24 +1,25 @@
-name: "Dependabot Automerge - Action"
+name: Enable automerge on dependabot PRs
+
 on:
-  pull_request:
+  # See note below about using pull_request_target
+  pull_request_target:
+
 jobs:
-  worker:
+  automerge:
+    name: Enable automerge on dependabot PRs
     runs-on: ubuntu-latest
-if: github.actor == 'dependabot[bot]'
-  steps:
-      - name: automerge
-        uses: actions/github-script@0.2.0
+    steps:
+      - name: Enable automerge on dependabot PRs
+        uses: daneden/enable-automerge-action@v1
         with:
-          script: |
-            github.pullRequests.createReview({
-              owner: context.payload.repository.owner.login,
-              repo: context.payload.repository.name,
-              pull_number: context.payload.pull_request.number,
-              event: 'APPROVE'
-            })
-            github.pullRequests.merge({
-              owner: context.payload.repository.owner.login,
-              repo: context.payload.repository.name,
-              pull_number: context.payload.pull_request.number
-            })
-          github-token: ${{github.token}}
+          # A personal access token that you have generated and saved in the
+          # repo or org’s encrypted secrets
+          github-token: ${{ secrets.ACTIONS_TOKEN }}
+
+          # The name of the PR author to enable automerge for
+          # Defaults to dependabot[bot]
+          allowed-author: "dependabot[bot]"
+
+          # Allowed values: MERGE | SQUASH | REBASE
+          # Defaults to MERGE
+          merge-method: MERGE
