@@ -23,7 +23,7 @@ jobs:
           github-token: ${{ secrets.PERSONAL_TOKEN }}
           netlify-auth-token: "N4Mx6XBssM7MwFEGPP4KybpysQk6twRv5_BCLfme674"
           netlify-site-id: "f7359130-5846-4dfa-9e23-54a191c26918"
-          build-dir: './build'
+          build-dir: './docs/storybook'
           draft: true
           comment-on-commit: true
 
