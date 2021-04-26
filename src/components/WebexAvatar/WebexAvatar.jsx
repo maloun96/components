@@ -15,7 +15,7 @@ import {usePerson} from '../hooks';
 export default function WebexAvatar({personID, displayStatus}) {
   const {avatar, displayName, status} = usePerson(personID);
   const type = displayStatus ? status : null;
-  alert(123);
+  alert(333);
   return <Avatar src={avatar} title={displayName} type={type} alt={displayName} />;
 }
 
