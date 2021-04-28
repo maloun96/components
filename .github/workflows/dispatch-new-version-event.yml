@@ -1,0 +1,19 @@
+name: Dispatch new version event
+
+on:
+  push:
+    branches:
+      - master
+  repository_dispatch:
+
+jobs:
+  update-webex-components:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch initiating repository event
+        # TODO: change urls for repositories
+        run: |
+          curl -X POST https://api.github.com/repos/maloun96/widgets/dispatches \
+          -H 'Accept: application/vnd.github.everest-preview+json' \
+          -u ${{ secrets.PERSONAL_TOKEN }} \
+          --data '{"event_type": "update-webex-components"}'
