@@ -20,9 +20,5 @@ jobs:
           echo "Curr: $CURRENT_VERSION"
           echo "PREV: $PREVIOUS_VERSION"
           if [ "$CURRENT_VERSION" != "$PREVIOUS_VERSION" ]; then
-               echo "PASSED"
-#            curl -X POST https://api.github.com/repos/maloun96/widgets/dispatches \
-#              -H 'Accept: application/vnd.github.everest-preview+json' \
-#              -u ${{ secrets.ACCESS_TOKEN }} \
-#              --data '{"event_type": "components:version-changed", "client_payload": { "version": "'"${CURRENT_VERSION}"'"}'
+             echo "PASSED"
           fi
