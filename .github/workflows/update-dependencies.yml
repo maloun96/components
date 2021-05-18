@@ -12,8 +12,6 @@ jobs:
           - $RW_FINGERPRINT
       - name: checkout
         uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
       - run: |
           npm install @webex/component-adapter-interfaces
           if [ -n "$(git status --porcelain)" ]; then
