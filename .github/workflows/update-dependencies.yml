@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
+        with:
+          persist-credentials: false
       - run: |
           npm install @webex/component-adapter-interfaces
           if [ -n "$(git status --porcelain)" ]; then
