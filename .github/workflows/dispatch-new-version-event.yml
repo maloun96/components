@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+  release:
+    types: [ created ]
 jobs:
   dispatch-new-version-event:
     runs-on: ubuntu-latest
